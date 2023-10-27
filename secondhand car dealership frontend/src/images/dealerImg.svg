@@ -1,0 +1,18 @@
+<svg width="1440" height="912" viewBox="0 0 1440 912" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1440" height="912" fill="#1E1E1E"/>
+<rect width="1440" height="912" fill="#F3F4F6"/>
+<g style="mix-blend-mode:plus-darker">
+<rect x="347" y="168" width="200" height="184" rx="5" fill="#E4EFFF"/>
+</g>
+<g style="mix-blend-mode:darken">
+<rect x="1277" y="622" width="150" height="139" fill="#E8FFA8"/>
+</g>
+<g style="mix-blend-mode:darken">
+<rect x="891" y="109" width="513" height="534" rx="5" fill="#FFDBDB"/>
+</g>
+<rect x="316" y="605" width="185" height="173" rx="5" fill="#FFE2AB"/>
+<rect x="99" y="456" width="248" height="208" rx="5" fill="#DEDEDE"/>
+<g style="mix-blend-mode:darken">
+<rect x="802" y="33" width="156" height="152" rx="5" fill="#DBFFBF"/>
+</g>
+</svg>
