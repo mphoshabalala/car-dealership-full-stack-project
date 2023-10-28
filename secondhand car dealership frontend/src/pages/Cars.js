@@ -3,11 +3,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useCars } from "../contexts/carsContext";
 import Car from "../components/Car";
+import ScrollToTop from "../components/ToTop";
 
 export default function Cars() {
   const { cars } = useCars();
   return (
     <>
+      <ScrollToTop />
       <Header />
       <div className="w-full py-32 pt-16 flex justify-center items-center flex-col bg-gray-100 text-gray-700">
         <div className="block  border-spacing-4 border-red-400 border-b-8 mt-16 ">

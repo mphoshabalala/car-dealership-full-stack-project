@@ -20,6 +20,7 @@ import maximumTopSpeed from "../images/speed.png";
 import sunroof from "../images/car.png";
 import airbag from "../images/airbag.png";
 import Loading from "../components/Loading";
+import ScrollToTop from "../components/ToTop";
 
 export default function DetailedCar() {
   const location = useLocation();
@@ -40,6 +41,7 @@ export default function DetailedCar() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <div className="pt-24 w-full flex flex-col  items-center bg-gray-100 text-gray-800">
         <div className="block  border-spacing-4 border-red-400 border-b-8 md:mb-16">
           <h1 className="text-5xl font-Bebas">

@@ -9,19 +9,21 @@ import DealersPage from "./pages/DealersPage";
 
 function App() {
   return (
-    <DealersProvider>
-      <CarsProvier>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Homepage />} />
-            <Route path="/cars" element={<Cars />} />
-            <Route path="/cars/:id" element={<DetailedCar />} />
-            <Route path="/sell-your-car" element={<SellYourCar />} />
-            <Route path="/dealers" element={<DealersPage />} />
-          </Routes>
-        </BrowserRouter>
-      </CarsProvier>
-    </DealersProvider>
+    <>
+      <DealersProvider>
+        <CarsProvier>
+          <BrowserRouter>
+            <Routes>
+              <Route index element={<Homepage />} />
+              <Route path="/cars" element={<Cars />} />
+              <Route path="/cars/:id" element={<DetailedCar />} />
+              <Route path="/sell-your-car" element={<SellYourCar />} />
+              <Route path="/dealers" element={<DealersPage />} />
+            </Routes>
+          </BrowserRouter>
+        </CarsProvier>
+      </DealersProvider>
+    </>
   );
 }
 
