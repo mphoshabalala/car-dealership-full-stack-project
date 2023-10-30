@@ -1,5 +1,5 @@
 # BEST DEALERS CAR DEALERSHIP WEBSITE
-This website is a MERN(MongoDB, EcpressJS, ReactJS, NodeJS) full-stack web application designed to provide a full experience for both the user and the administration of a car dealership.
+This website is a MERN(MongoDB, EcpressJS, ReactJS, NodeJS) and Tailwind css full-stack web application designed to provide a full experience for both the user and the administration of a car dealership.
 
 ## Features
 ### Frontend
