@@ -13,7 +13,6 @@ This website is a MERN(MongoDB, EcpressJS, ReactJS, NodeJS) full-stack web appli
    - `/api/v1/dealers`
  
 ## Backend
-# My API - Product Management and User Registration
 
 This API provides endpoints for managing products and user registration. It is built using Node.js,Express.js and Mongodb with Mongoose.
 
