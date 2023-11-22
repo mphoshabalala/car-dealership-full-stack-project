@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
+import CarReviewForm from "../components/CarReviewForm";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
 import { useCars } from "../contexts/carsContext";
@@ -153,7 +154,11 @@ export default function DetailedCar() {
           </div>
         </div>
       </div>
-
+      <CarReviewForm
+        id={carId}
+        carModel={currentCar.model}
+        carBrand={currentCar.brand}
+      />
       <Footer />
     </>
   );

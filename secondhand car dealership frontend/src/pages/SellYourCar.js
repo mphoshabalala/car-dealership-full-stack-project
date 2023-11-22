@@ -8,8 +8,6 @@ import axios from "axios";
 const BASE_URL = "http://localhost:8000/api/v1/sellers";
 
 export default function SellYourCar() {
-  const [soldCar, setSoldCars] = useState({});
-
   const [form, setForm] = useState({
     model: "",
     brand: "",
@@ -28,7 +26,7 @@ export default function SellYourCar() {
     carRegistrationImg: "",
   });
 
-  // decode images to base 64
+  // decode files to base 64
   const convertToBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const fr = new FileReader();
@@ -136,7 +134,7 @@ export default function SellYourCar() {
               </h1>
               <div className="flex flex-col items-center">
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Model"
                   required
@@ -145,7 +143,7 @@ export default function SellYourCar() {
                   name="model"
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Brand"
                   required
@@ -156,7 +154,7 @@ export default function SellYourCar() {
                 <div className="my-4 ">
                   <p className="text-green-600 pl-4">Date of purchase</p>
                   <input
-                    className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                    className=" w-80 p-4 border-2  border-gray-600 m-2"
                     type="date"
                     placeholder="Year of purchase"
                     required
@@ -166,7 +164,7 @@ export default function SellYourCar() {
                   />
                 </div>
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Mile age"
                   required
@@ -175,7 +173,7 @@ export default function SellYourCar() {
                   name="mileage"
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Type, e.g. Sedan, SUV"
                   required
@@ -184,7 +182,7 @@ export default function SellYourCar() {
                   name="carType"
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Drive mode, e.g Automatic"
                   required
@@ -193,7 +191,7 @@ export default function SellYourCar() {
                   name="driveMode"
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Fuel Type, e.g Petrol"
                   required
@@ -202,7 +200,7 @@ export default function SellYourCar() {
                   name="fuelType"
                 />
                 <input
-                  className="text-gray-700 text-semibold w-80 my-2 md:my-4 px-2 md:px-4 py-2 font-semibold md:font-bold"
+                  className=" w-80 p-4 border-2  border-gray-600 m-2"
                   type="text"
                   placeholder="Max speed"
                   required
