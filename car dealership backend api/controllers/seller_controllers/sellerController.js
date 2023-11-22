@@ -23,49 +23,43 @@ exports.getSoldCar = async (req, res, next) => {
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "../../../secondhand car dealership frontend/src/sellerFiles/");
+    cb(null, "images/");
   },
   filename: (req, file, cb) => {
-    cb(null, file.originalname);
+    cb(null, Date.now() + "-" + file.originalname);
   },
 });
 
-const uploadFiles = multer({ storage: storage });
+const upload = multer({ storage: storage });
 
-(exports.postSoldCar = uploadFiles.array(
-  "fullCarExteriorImg interiorDahboardImg interior1Img interior2Img engineImg yourIdImg carRegistrationImg",
-  7
-)),
-  async (req, res, next) => {
-    if (!req.files) {
-      return res.status(400).send("No files uploaded");
-    }
-
-    const uploadedFiles = req.files;
-    const data = req.body;
-
-    const savedFiles = await Promise.all(
-      uploadedFiles.map(async (file) => {
-        const savedFile = new SoldCar({ ...data, [file.fieldname]: file.path });
-        return savedFile.save();
-      })
-    );
-    res.send("Files uploaded and data saved successfully.");
-  };
+exports.postSoldCar = async (req, res, next) => {
+  const data = await req.body;
+  const newSellerInfo = await SoldCar.create(req.body);
+  res.status(201).json({
+    status: "success",
+    data: {
+      car: newSellerInfo,
+    },
+  });
+};
 
 exports.updateSoldCar = async (req, res, next) => {
-  const sellerInfo = await SoldCar.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true,
-  });
+  const updatedSoldCar = await SoldCar.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
 
-  if (!sellerInfo) {
-    return new Error("No sellerInfo found with that ID", 404);
+  if (!updatedSoldCar) {
+    return Error("No sold car found with that ID", 404);
   }
   res.status(200).json({
     status: "success",
     data: {
-      sellerInfo,
+      updatedSoldCar,
     },
   });
 };

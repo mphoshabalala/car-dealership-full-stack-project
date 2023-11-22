@@ -6,6 +6,7 @@ import { CarsProvier } from "./contexts/carsContext";
 import DetailedCar from "./pages/DetailedCar";
 import SellYourCar from "./pages/SellYourCar";
 import DealersPage from "./pages/DealersPage";
+import { SellYourCarProvider } from "./contexts/sellYourCarContext";
 
 function App() {
   return (

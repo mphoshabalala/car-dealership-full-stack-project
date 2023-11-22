@@ -5,8 +5,8 @@ const router = express.Router();
 
 router
   .route("/")
-  .post(sellerController.getAllSoldCars)
-  .get(sellerController.postSoldCar);
+  .post(sellerController.postSoldCar)
+  .get(sellerController.getAllSoldCars);
 
 router
   .route("/:id")
