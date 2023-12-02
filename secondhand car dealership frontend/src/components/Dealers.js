@@ -17,9 +17,9 @@ export default function Dealers() {
         <h1 className="text-5xl font-Bebas">OUR DEALERS</h1>
       </div>
 
-      <div className="flex flex-wrap justify-center">
-        {dealers.map((dealer) => (
-          <Dealer key={dealer.id} dealer={dealer} />
+      <div className="flex flex-col">
+        {dealers.map((dealer, index) => (
+          <Dealer key={dealer.owner} dealer={dealer} index={index} />
         ))}
       </div>
     </div>

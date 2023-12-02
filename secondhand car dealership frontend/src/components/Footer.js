@@ -2,6 +2,7 @@ import React from "react";
 import iphone from "../images/iphone.png";
 import email from "../images/email.png";
 import underline from "../images/underline.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -20,14 +21,14 @@ export default function Footer() {
               {/* <img className="sm:w-8 sm:h-8" src={iphone} alt="" /> */}
               <div className="items-center">
                 <h1 className="text-center ">CONTACTS</h1>
-                <p>+27 71 569 1123</p>
+                <p>+27 71 257 6112</p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row pt-8 md:pt-0">
               {/* <img className="sm:w-8 sm:h-8 sm:hidden" src={email} alt="" /> */}
               <div className="md:pl-4">
                 <h1 className="sm:text-center ">EMAIL</h1>
-                <p className="sm:text-center ">uraclinespace3343@gmail.com</p>
+                <p className="sm:text-center ">mphoshabalala3401@gmail.com</p>
               </div>
             </div>
           </div>
@@ -39,16 +40,16 @@ export default function Footer() {
             </h1>
             <ul className="flex flex-col items-center ">
               <li>
-                <a href="#1">Buy Car</a>
+                <Link to="/cars">Buy Car</Link>
               </li>
               <li>
-                <a href="#2">Sell Car</a>
+                <Link to="/sell-your-car">Sell Car</Link>
               </li>
               <li>
                 <a href="#3">Marketing With Us</a>
               </li>
               <li>
-                <a href="#4">About Us</a>
+                <Link to="/about-us">About Us</Link>
               </li>
             </ul>
           </div>
@@ -59,10 +60,10 @@ export default function Footer() {
             </h1>
             <ul className="text-center">
               <li>
-                <a href="#1">Dealers</a>
+                <a href="/dealers">Dealers</a>
               </li>
               <li>
-                <a href="#2">Cars</a>
+                <a href="/cars">Cars</a>
               </li>
             </ul>
           </div>

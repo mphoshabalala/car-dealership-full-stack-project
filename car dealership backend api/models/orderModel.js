@@ -21,6 +21,18 @@ const orderSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  model: {
+    type: String,
+    required: true,
+  },
+  brand: {
+    type: String,
+    required: true,
+  },
+  carId: {
+    type: String,
+    required: true,
+  },
 });
 
 const Order = mongoose.model("order", orderSchema);

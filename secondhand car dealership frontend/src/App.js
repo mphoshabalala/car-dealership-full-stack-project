@@ -7,6 +7,7 @@ import DetailedCar from "./pages/DetailedCar";
 import SellYourCar from "./pages/SellYourCar";
 import DealersPage from "./pages/DealersPage";
 import { SellYourCarProvider } from "./contexts/sellYourCarContext";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/cars/:id" element={<DetailedCar />} />
               <Route path="/sell-your-car" element={<SellYourCar />} />
               <Route path="/dealers" element={<DealersPage />} />
+              <Route path="/about-us" element={<AboutUs />} />
             </Routes>
           </BrowserRouter>
         </CarsProvier>

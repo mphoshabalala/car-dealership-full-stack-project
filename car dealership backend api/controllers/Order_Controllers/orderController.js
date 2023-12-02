@@ -21,7 +21,6 @@ exports.getOrder = async (req, res, next) => {
 };
 
 exports.postOrder = async (req, res, next) => {
-  console.log(req.body);
   const newOrder = await Order.create(req.body);
   if (!newOrder) {
     throw new Error("Order was not succesfully made", 404);

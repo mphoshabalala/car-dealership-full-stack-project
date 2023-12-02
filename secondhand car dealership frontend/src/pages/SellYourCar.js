@@ -50,6 +50,7 @@ export default function SellYourCar() {
 
     if (files && files.length > 0) {
       const file = files[0];
+      // convert file to base 64 encoding
       const base64 = await convertToBase64(file);
       console.log(base64);
       setForm((prevForm) => ({ ...prevForm, [field]: base64 }));
