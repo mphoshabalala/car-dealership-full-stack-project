@@ -13,7 +13,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.json({ limit: "50mb" })); // Adjust the limit as needed
 
 // Increase payload size for form data
-app.use(express.urlencoded({ limit: "50mb", extended: true })); // Adjust the limit as needed
+app.use(express.urlencoded({ limit: "50mb", extended: true })); // Adjust the limit to 50mb file
 // use morgan during development
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
